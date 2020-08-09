@@ -1,19 +1,24 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextWriting : MonoBehaviour
+public class TextWriting : MonoBehaviour, IWriting
 {
+    public Text UIText;
+    public Pen DefaultPen;
+
     private string _originalText;
     private int _originalTextIndex = 0;
+    private IPen _currentPen;
 
-    public Text UIText;
-    [Range(0f, 1f)]
-    public float Value = 0f;
+    public SortedDictionary<int, IPen> _penDistribution = new SortedDictionary<int, IPen>();
 
     private void WriteLetters(int amount)
     {
+        if (amount == 0) return;
+
         var colorClosingTag = "</color>";
         // Remove color closing tag.
         var currentText = UIText.text.Substring(0, UIText.text.Length - colorClosingTag.Length);
@@ -25,24 +30,48 @@ public class TextWriting : MonoBehaviour
         _originalTextIndex += amount;
     }
 
+    private void ChangeColor(Color color)
+    {
+        if (_originalTextIndex < _originalText.Length)
+        {
+            UIText.text += $"<color=\"#{ColorUtility.ToHtmlStringRGB(color)}\"></color>";
+        }
+    }
+
     private void Awake()
     {
         _originalText = UIText.text;
         UIText.text = "";
-        // ChangeColor(UIText.color);
+        ChangePen(DefaultPen);
+        _penDistribution[0] = _currentPen;
     }
 
-    private IEnumerator Start()
+    public void SetAmountWritten(float amount)
     {
-        foreach (var c in _originalText)
+        var totalLettersToShow = (int)(_originalText.Length * amount);
+        if (totalLettersToShow < _originalTextIndex)
         {
-            yield return new WaitForSeconds(0.01f);
-            WriteLetters(1);
+            throw new System.NotImplementedException("Can't write less then what was already written.");
         }
+        WriteLetters(totalLettersToShow - _originalTextIndex);
+        _originalTextIndex = totalLettersToShow;
     }
 
-    public void ChangeColor(Color color)
+    public void ChangePen(IPen pen)
     {
-        UIText.text += $"<color=\"#{ColorUtility.ToHtmlStringRGB(color)}\"></color>";
+        if (_currentPen != pen)
+        {
+            _penDistribution.Add(_originalTextIndex, _currentPen);
+        }
+        ChangeColor(pen.Color);
+        _currentPen = pen;
+    }
+
+    public SortedDictionary<int, IPen> GetDistribution()
+    {
+        var distribution = new SortedDictionary<int, IPen>(_penDistribution);
+        distribution[0] = DefaultPen;
+        distribution.Add(_originalTextIndex, _currentPen);
+        return distribution;
     }
 }
