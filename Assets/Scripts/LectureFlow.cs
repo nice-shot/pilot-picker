@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using UnityEngine;
 
 public class LectureFlow : List<LectureSegment>
@@ -87,5 +88,15 @@ public class LectureFlow : List<LectureSegment>
             }
 
         return distribution;
+    }
+
+    public override string ToString()
+    {
+        var output = new StringBuilder("Flow:\n");
+        foreach (var segment in this)
+        {
+            output.AppendLine($"{segment.Duration} - {segment.Style}");
+        }
+        return output.ToString();
     }
 }
