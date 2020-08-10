@@ -1,6 +1,6 @@
 using UnityEngine;
 
 [CreateAssetMenu]
-public class TeachingStyle : ScriptableObject, IStyle
+public class TeachingStyle : Style
 {
 }

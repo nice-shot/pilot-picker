@@ -10,6 +10,7 @@ public class Lecture : MonoBehaviour
 
     private IEnumerator Start()
     {
+        var flow = new LectureFlow();
         var startTime = Time.time;
         var factor = 0f;
 
@@ -30,35 +31,4 @@ public class Lecture : MonoBehaviour
             }
         }
     }
-
-    public static SortedDictionary<float, int> GenerateFlow(
-        float duration,
-        Dictionary<int, float> distribution,
-        int seed=-1)
-    {
-        if (seed != -1) Random.InitState(seed);
-
-        var flow = new SortedDictionary<float, int>();
-        var currentTime = 0f;
-        var timedDistribution = distribution.ToDictionary(item => item.Key, item => item.Value * duration);
-        var minDuration = 2f;
-
-        while (currentTime < duration)
-        {
-            var styleIndex = Random.Range(0, timedDistribution.Keys.Count);
-            var maxDuration = timedDistribution[styleIndex];
-            if (maxDuration <= 0f) continue;
-
-            var styleDuration = Random.Range(
-                Mathf.Min(minDuration, maxDuration),
-                maxDuration
-            );
-            timedDistribution[styleIndex] -= styleDuration;
-            currentTime += styleDuration;
-            flow[currentTime] = styleIndex;
-        }
-
-        return flow;
-    }
-
 }

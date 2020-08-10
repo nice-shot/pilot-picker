@@ -17,7 +17,7 @@ namespace Tests
             var s3 = ScriptableObject.CreateInstance<TeachingStyle>();
             var s4 = ScriptableObject.CreateInstance<TeachingStyle>();
 
-            var styleDistribution = new Dictionary<IStyle, float>()
+            var styleDistribution = new Dictionary<Style, float>()
             {
                 { s1, 0.6f },
                 { s2, 0.2f },

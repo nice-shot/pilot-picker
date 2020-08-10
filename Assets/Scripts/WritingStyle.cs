@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu]
-public class WritingStyle : ScriptableObject, IStyle
+public class WritingStyle : Style
 {
     public Color PenColor;
 }
