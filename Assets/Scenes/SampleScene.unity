@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Writing: {fileID: 1531108717}
-  Duration: 30
+  Duration: 15
 --- !u!114 &1531108719
 MonoBehaviour:
   m_ObjectHideFlags: 0
