@@ -5,30 +5,57 @@ using UnityEngine;
 
 public class Lecture : MonoBehaviour
 {
-    public TextWriting Writing;
+    [System.Serializable]
+    public class StyleDistribution
+    {
+        public TeachingStyle Style;
+        public float Amount;
+    }
+
+    public WritingController Writing;
+    public TeacherController Teacher;
+    public UIController UI;
     public float Duration;
+    public StyleDistribution[] Distribution;
+
 
     private IEnumerator Start()
     {
         var flow = new LectureFlow();
-        var startTime = Time.time;
-        var factor = 0f;
+        flow.Generate(Duration, Distribution.ToDictionary(item => (IStyle)item.Style, item => item.Amount));
 
-        while (factor < 1f)
-        {
-            Writing.SetAmountWritten(factor);
-            yield return null;
-            factor = (Time.time - startTime) / Duration;
-        }
+        Teacher.Play(flow);
+        Writing.Listen(Duration);
 
-        Writing.SetAmountWritten(1f);
+        yield return new WaitForSeconds(Duration);
 
-        foreach (var item in Writing.GetDistribution())
-        {
-            if (item.Value is ScriptableObject)
-            {
-                print($"{(item.Value as ScriptableObject).name} - {item.Key}");
-            }
-        }
+        Teacher.Stop();
+        var playerFlow = Writing.Stop();
+        UI.ShowScore(flow.Compare(playerFlow));
+
+
+
+
+
+
+        // var startTime = Time.time;
+        // var factor = 0f;
+
+        // while (factor < 1f)
+        // {
+        //     Writing.SetAmountWritten(factor);
+        //     yield return null;
+        //     factor = (Time.time - startTime) / Duration;
+        // }
+
+        // Writing.SetAmountWritten(1f);
+
+        // foreach (var item in Writing.GetDistribution())
+        // {
+        //     if (item.Value is ScriptableObject)
+        //     {
+        //         print($"{(item.Value as ScriptableObject).name} - {item.Key}");
+        //     }
+        // }
     }
 }

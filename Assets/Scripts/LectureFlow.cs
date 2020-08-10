@@ -8,7 +8,7 @@ public class LectureFlow : List<LectureSegment>
     /// <summary>
     /// Generates a random lecture flow with the given duration and distribution.
     /// </summary>
-    public void Generate(float duration, Dictionary<Style, float> distribution, int seed = -1)
+    public void Generate(float duration, Dictionary<IStyle, float> distribution, int seed = -1)
     {
         Clear();
 
@@ -67,9 +67,9 @@ public class LectureFlow : List<LectureSegment>
         return diff;
     }
 
-    public Dictionary<Style, float> GetDistribution()
+    public Dictionary<IStyle, float> GetDistribution()
     {
-        var distribution = new Dictionary<Style, float>();
+        var distribution = new Dictionary<IStyle, float>();
         var totalDuration = this.Sum(segment => segment.Duration);
 
         foreach (var segment in this)
