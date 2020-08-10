@@ -7,36 +7,40 @@ using UnityEngine.TestTools;
 
 namespace Tests
 {
-    public class LectureTests
+    public class LectureFlowTest
     {
         [Test]
-        public void Test_Lecture_GenerateFlow()
+        public void TestRandomFlow()
         {
-            var styleDistribution = new Dictionary<int, float>()
+            var s1 = new TeachingStyle();
+            var s2 = new TeachingStyle();
+            var s3 = new TeachingStyle();
+            var s4 = new TeachingStyle();
+
+            var styleDistribution = new Dictionary<IStyle, float>()
             {
-                { 0, 0.6f },
-                { 1, 0.2f },
-                { 2, 0.15f },
-                { 3, 0.05f },
+                { s1, 0.6f },
+                { s2, 0.2f },
+                { s3, 0.15f },
+                { s4, 0.05f },
             };
-            var duration = 30f;
-            var flow = Lecture.GenerateFlow(duration, styleDistribution, 0);
 
-            var outputDistribution = new Dictionary<int, float>();
-            var prevKey = 0f;
-            foreach (var item in flow)
+            var totalDuration = 30f;
+            var flow = new LectureFlow(totalDuration, styleDistribution, 0);
+
+            var outputDistribution = new Dictionary<IStyle, float>();
+            foreach (var segment in flow)
             {
-                var addedDistributionPercentage = (item.Key - prevKey) / duration;
+                var addedDistributionPercentage = segment.Duration / totalDuration;
 
-                if (outputDistribution.ContainsKey(item.Value))
+                if (outputDistribution.ContainsKey(segment.Style))
                 {
-                    outputDistribution[item.Value] += addedDistributionPercentage;
+                    outputDistribution[segment.Style] += addedDistributionPercentage;
                 }
                 else
                 {
-                    outputDistribution[item.Value] = addedDistributionPercentage;
+                    outputDistribution[segment.Style] = addedDistributionPercentage;
                 }
-                prevKey = item.Key;
             }
 
             Assert.AreEqual(styleDistribution.Count, outputDistribution.Count);
