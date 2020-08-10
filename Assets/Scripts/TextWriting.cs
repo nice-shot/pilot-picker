@@ -13,7 +13,7 @@ public class TextWriting : MonoBehaviour, IWriting
     private int _originalTextIndex = 0;
     private IPen _currentPen;
 
-    public SortedDictionary<int, IPen> _penDistribution = new SortedDictionary<int, IPen>();
+    private SortedDictionary<int, IPen> _penDistribution = new SortedDictionary<int, IPen>();
 
     private void WriteLetters(int amount)
     {

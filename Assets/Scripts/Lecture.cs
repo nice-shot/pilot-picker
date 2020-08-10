@@ -24,6 +24,8 @@ public class Lecture : MonoBehaviour
         var flow = new LectureFlow();
         flow.Generate(Duration, Distribution.ToDictionary(item => (IStyle)item.Style, item => item.Amount));
 
+        print($"Generated lecture flow: {flow}");
+
         Teacher.Play(flow);
         Writing.Listen(Duration);
 
@@ -31,6 +33,9 @@ public class Lecture : MonoBehaviour
 
         Teacher.Stop();
         var playerFlow = Writing.Stop();
+
+        print($"Got writing lecture flow: {playerFlow}");
+
         UI.ShowScore(flow.Compare(playerFlow));
 
 

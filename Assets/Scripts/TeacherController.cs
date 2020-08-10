@@ -29,13 +29,13 @@ public class TeacherController : MonoBehaviour
 
     public void Play(LectureFlow flow)
     {
-        print($"Playing flow: {flow}");
+        print("Started playing lecture flow.");
         StartCoroutine(PlayRouting(flow));
     }
 
     public void Stop()
     {
-        print($"Stopping.");
+        print("Stopping.");
         StopAllCoroutines();
         DisplayText.text = "DONE";
     }
