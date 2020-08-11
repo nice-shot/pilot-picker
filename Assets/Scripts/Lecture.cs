@@ -18,8 +18,7 @@ public class Lecture : MonoBehaviour
     public float Duration;
     public StyleDistribution[] Distribution;
 
-
-    private IEnumerator Start()
+    private IEnumerator LectureRoutine()
     {
         var flow = new LectureFlow();
         flow.Generate(Duration, Distribution.ToDictionary(item => (IStyle)item.Style, item => item.Amount));
@@ -46,4 +45,8 @@ public class Lecture : MonoBehaviour
         var score = (1 - flow.Compare(playerFlow)) * 100;
         UI.ShowScore(score);
     }
+
+    private void Start() => Restart();
+
+    public void Restart() => StartCoroutine(LectureRoutine());
 }

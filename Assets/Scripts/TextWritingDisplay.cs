@@ -69,6 +69,7 @@ public class TextWritingDisplay : MonoBehaviour
     public void StartWriting(float duration, Color startingColor)
     {
         UIText.text = "";
+        _originalTextIndex = 0;
         ChangeColor(startingColor);
         StartCoroutine(WritingRoutine(duration));
     }
