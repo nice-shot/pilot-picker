@@ -26,6 +26,8 @@ public class Lecture : MonoBehaviour
 
         print($"Generated lecture flow: {flow}");
 
+        UI.Reset();
+
         // Pause before starting.
         yield return new WaitForSeconds(3f);
         Teacher.Play(flow);
@@ -38,6 +40,7 @@ public class Lecture : MonoBehaviour
 
         print($"Got writing lecture flow: {playerFlow}");
 
-        UI.ShowScore(flow.Compare(playerFlow));
+        var score = (1 - flow.Compare(playerFlow)) * 100;
+        UI.ShowScore(score);
     }
 }

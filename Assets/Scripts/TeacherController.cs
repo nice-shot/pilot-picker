@@ -6,7 +6,6 @@ public class TeacherController : MonoBehaviour
 {
     public Text DisplayText;
 
-
     private void Awake() => DisplayText.text = "INTRO";
 
     private IEnumerator PlayRouting(LectureFlow flow)
