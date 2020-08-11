@@ -821,8 +821,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1531108716}
-  - component: {fileID: 1531108717}
-  - component: {fileID: 1531108719}
   - component: {fileID: 1531108718}
   m_Layer: 0
   m_Name: LectureManager
@@ -845,20 +843,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1531108717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531108715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3eb7994ed82d174ca58be3c4b663ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIText: {fileID: 527444415}
-  DefaultPen: {fileID: 11400000, guid: b1f187d75d66603449cd663ff8e7a8cf, type: 2}
 --- !u!114 &1531108718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,20 +868,6 @@ MonoBehaviour:
     Amount: 0.1
   - Style: {fileID: 11400000, guid: 5f8c1a6baef11284d9e5a6d77ed7fa5d, type: 2}
     Amount: 0.25
---- !u!114 &1531108719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531108715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c5c94c250478041a2580648ca40adb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PenButtons: []
-  Writing: {fileID: 1531108717}
 --- !u!1001 &1597878368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1329,6 +1299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1987957563}
   - component: {fileID: 1987957562}
+  - component: {fileID: 1987957564}
   m_Layer: 0
   m_Name: WritingController
   m_TagString: Untagged
@@ -1354,6 +1325,7 @@ MonoBehaviour:
   - {fileID: 2010366879}
   - {fileID: 1597878370}
   DefaultPen: {fileID: 712672157767368939}
+  WritingDisplay: {fileID: 1987957564}
 --- !u!4 &1987957563
 Transform:
   m_ObjectHideFlags: 0
@@ -1368,6 +1340,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1987957564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987957561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136432f4ed8d6a44c9b99bea3abe03f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIText: {fileID: 527444415}
 --- !u!1001 &2010366877
 PrefabInstance:
   m_ObjectHideFlags: 0

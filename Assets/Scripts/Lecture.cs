@@ -26,6 +26,8 @@ public class Lecture : MonoBehaviour
 
         print($"Generated lecture flow: {flow}");
 
+        // Pause before starting.
+        yield return new WaitForSeconds(3f);
         Teacher.Play(flow);
         Writing.Listen(Duration);
 
@@ -37,30 +39,5 @@ public class Lecture : MonoBehaviour
         print($"Got writing lecture flow: {playerFlow}");
 
         UI.ShowScore(flow.Compare(playerFlow));
-
-
-
-
-
-
-        // var startTime = Time.time;
-        // var factor = 0f;
-
-        // while (factor < 1f)
-        // {
-        //     Writing.SetAmountWritten(factor);
-        //     yield return null;
-        //     factor = (Time.time - startTime) / Duration;
-        // }
-
-        // Writing.SetAmountWritten(1f);
-
-        // foreach (var item in Writing.GetDistribution())
-        // {
-        //     if (item.Value is ScriptableObject)
-        //     {
-        //         print($"{(item.Value as ScriptableObject).name} - {item.Key}");
-        //     }
-        // }
     }
 }
