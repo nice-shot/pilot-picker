@@ -57,4 +57,6 @@ public class TeacherController : MonoBehaviour
         Voice.loop = false;
         Voice.Play();
     }
+
+    public bool IsOutroFinished() => !Voice.isPlaying;
 }

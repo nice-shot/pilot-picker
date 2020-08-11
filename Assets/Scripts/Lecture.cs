@@ -41,6 +41,8 @@ public class Lecture : MonoBehaviour
 
         print($"Got writing lecture flow: {playerFlow}");
 
+        yield return new WaitUntil(Teacher.IsOutroFinished);
+
         var score = (1 - flow.Compare(playerFlow)) * 100;
         UI.ShowScore(score);
     }
