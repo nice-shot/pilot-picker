@@ -27,6 +27,7 @@ public class Lecture : MonoBehaviour
         print($"Generated lecture flow: {flow}");
 
         UI.Reset();
+        Teacher.PlayIntro();
 
         // Pause before starting.
         yield return new WaitForSeconds(3f);
