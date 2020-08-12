@@ -4,7 +4,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextWritingDisplay : MonoBehaviour
+public class TextWritingDisplay : WritingDisplay
 {
     public Text UIText;
 
@@ -57,7 +57,7 @@ public class TextWritingDisplay : MonoBehaviour
         _originalText = UIText.text;
     }
 
-    public void ChangeColor(Color color)
+    override public void ChangeColor(Color color)
     {
         // Only change if we're not done writing.
         if (_originalTextIndex < _originalText.Length)
@@ -66,7 +66,7 @@ public class TextWritingDisplay : MonoBehaviour
         }
     }
 
-    public void StartWriting(float duration, Color startingColor)
+    override public void StartWriting(float duration, Color startingColor)
     {
         UIText.text = "";
         _originalTextIndex = 0;
@@ -74,5 +74,7 @@ public class TextWritingDisplay : MonoBehaviour
         StartCoroutine(WritingRoutine(duration));
     }
 
-    public void StopWriting() => StopAllCoroutines();
+    override public void StopWriting() => StopAllCoroutines();
+
+    override public void Reset() { }
 }

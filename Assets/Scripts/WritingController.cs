@@ -4,7 +4,7 @@ public class WritingController : MonoBehaviour
 {
     public PilotPen[] Pens;
     public PilotPen DefaultPen;
-    public TextWritingDisplay WritingDisplay;
+    public WritingDisplay WritingDisplay;
 
     private LectureFlow _flow = new LectureFlow();
     private float _previousChange = -1f;
@@ -46,5 +46,10 @@ public class WritingController : MonoBehaviour
         _previousChange = -1f;
         if (WritingDisplay) WritingDisplay.StopWriting();
         return _flow;
+    }
+
+    public void Reset()
+    {
+        if (WritingDisplay) WritingDisplay.Reset();
     }
 }

@@ -1,10 +1,13 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class LineMaskWritingDisplay : MonoBehaviour
+public class LineMaskWritingDisplay : WritingDisplay
 {
     // Assumes the lines are ordered in the hierarchy from top to bottom.
-    private LineRenderer[] lineRenderers;
+    private LineRenderer[] _lineRenderers;
+    private float _currentDisplayedAmount;
+    private Color _previousColor;
 
     /// <summary>
     /// Adds additional points to the line. Assumes there are only two points at the start.
@@ -34,7 +37,7 @@ public class LineMaskWritingDisplay : MonoBehaviour
     /// </summary>
     private void SetDisplayedAmount(float value)
     {
-        var numOfLines = lineRenderers.Length;
+        var numOfLines = _lineRenderers.Length;
         var multipliedValue = value * numOfLines;
 
         var full = new GradientAlphaKey[] {
@@ -49,7 +52,7 @@ public class LineMaskWritingDisplay : MonoBehaviour
 
         for (int i = 0; i < numOfLines; i++)
         {
-            var line = lineRenderers[i];
+            var line = _lineRenderers[i];
             GradientAlphaKey[] alphaGradient;
 
             if (i < Mathf.Floor(multipliedValue))
@@ -82,6 +85,7 @@ public class LineMaskWritingDisplay : MonoBehaviour
 
         while (factor < 1f)
         {
+            _currentDisplayedAmount = factor;
             SetDisplayedAmount(factor);
             yield return null;
             factor = (Time.time - startTime) / duration;
@@ -92,9 +96,50 @@ public class LineMaskWritingDisplay : MonoBehaviour
 
     private void Awake()
     {
-        lineRenderers = GetComponentsInChildren<LineRenderer>();
+        _lineRenderers = GetComponentsInChildren<LineRenderer>();
         // Adds more points to allow more detailed effects for the gradient.
-        foreach (var line in lineRenderers) AddIntermidiatePoints(line, 20);
-        StartCoroutine(WritingRoutine(20));
+        foreach (var line in _lineRenderers) AddIntermidiatePoints(line, 20);
     }
+
+    public override void ChangeColor(Color color)
+    {
+        var multipliedAmount = _currentDisplayedAmount * _lineRenderers.Length;
+        for (int i = (int)multipliedAmount; i < _lineRenderers.Length; i++)
+        {
+            var line = _lineRenderers[i];
+            var gradient = line.colorGradient;
+            if (i > Mathf.Floor(multipliedAmount))
+            {
+                gradient.colorKeys = new GradientColorKey[] {
+                    new GradientColorKey(color, 0)
+                };
+            }
+            else {
+                var previousGrad = new List<GradientColorKey>(gradient.colorKeys);
+                var lastKey = previousGrad[previousGrad.Count - 1];
+
+                previousGrad[previousGrad.Count - 1] = new GradientColorKey(color, 1);
+                previousGrad.Add(new GradientColorKey(lastKey.color, (multipliedAmount % 1) - Mathf.Epsilon));
+                previousGrad.Add(new GradientColorKey(color, multipliedAmount % 1));
+                gradient.colorKeys = previousGrad.ToArray();
+            }
+
+            line.colorGradient = gradient;
+        }
+
+        _previousColor = color;
+    }
+
+    public override void StartWriting(float duration, Color startingColor)
+    {
+        StartCoroutine(WritingRoutine(duration));
+    }
+
+    public override void StopWriting()
+    {
+        StopAllCoroutines();
+        SetDisplayedAmount(1f);
+    }
+
+    public override void Reset() => SetDisplayedAmount(0);
 }

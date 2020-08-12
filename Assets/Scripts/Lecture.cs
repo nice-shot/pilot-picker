@@ -26,6 +26,7 @@ public class Lecture : MonoBehaviour
         print($"Generated lecture flow: {flow}");
 
         UI.Reset();
+        Writing.Reset();
         Teacher.PlayIntro();
 
         // Pause before starting.
