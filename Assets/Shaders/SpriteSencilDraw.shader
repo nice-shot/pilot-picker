@@ -59,7 +59,8 @@ SubShader
             v2f OUT;
             OUT.vertex = UnityObjectToClipPos(IN.vertex);
             OUT.texcoord = IN.texcoord;
-            OUT.color = IN.color * _Color;
+            OUT.color = IN.color;
+            // OUT.color = IN.color * _Color;
             #ifdef PIXELSNAP_ON
             OUT.vertex = UnityPixelSnap (OUT.vertex);
             #endif
@@ -71,8 +72,9 @@ SubShader
 
         fixed4 frag(v2f IN) : SV_Target
         {
+            return IN.color * _Color;
             fixed4 c = tex2D(_MainTex, IN.texcoord) * IN.color;
-            c.rgb *= c.a;
+            c.rgb = c.a * _Color;
             return c;
         }
     ENDCG

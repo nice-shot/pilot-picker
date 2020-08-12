@@ -75,8 +75,9 @@
              fixed4 c = tex2D(_MainTex, IN.texcoord) * IN.color;
              if (c.a<0.1) discard;            //Most IMPORTANT working Code
              c.rgb *= c.a;
+             c.a = 0;
             //  return c;
-            return float4(0,0,0,0);
+             return float4(0,0,0,0);
          }
      ENDCG
      }
