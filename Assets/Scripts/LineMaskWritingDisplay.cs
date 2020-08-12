@@ -7,7 +7,6 @@ public class LineMaskWritingDisplay : WritingDisplay
     // Assumes the lines are ordered in the hierarchy from top to bottom.
     private LineRenderer[] _lineRenderers;
     private float _currentDisplayedAmount;
-    private Color _previousColor;
 
     /// <summary>
     /// Adds additional points to the line. Assumes there are only two points at the start.
@@ -37,15 +36,18 @@ public class LineMaskWritingDisplay : WritingDisplay
     /// </summary>
     private void SetDisplayedAmount(float value)
     {
+        _currentDisplayedAmount = value;
         var numOfLines = _lineRenderers.Length;
         var multipliedValue = value * numOfLines;
 
-        var full = new GradientAlphaKey[] {
+        var full = new GradientAlphaKey[]
+        {
             new GradientAlphaKey(1, 0),
             new GradientAlphaKey(1, 1)
         };
 
-        var empty = new GradientAlphaKey[] {
+        var empty = new GradientAlphaKey[]
+        {
             new GradientAlphaKey(0, 0),
             new GradientAlphaKey(1, 0)
         };
@@ -64,7 +66,8 @@ public class LineMaskWritingDisplay : WritingDisplay
                 alphaGradient = empty;
             }
             else {
-                alphaGradient = new GradientAlphaKey[] {
+                alphaGradient = new GradientAlphaKey[]
+                {
                     new GradientAlphaKey(1, 0),
                     new GradientAlphaKey(1, multipliedValue % 1),
                     new GradientAlphaKey(0, (multipliedValue % 1) + Mathf.Epsilon),
@@ -85,13 +88,28 @@ public class LineMaskWritingDisplay : WritingDisplay
 
         while (factor < 1f)
         {
-            _currentDisplayedAmount = factor;
             SetDisplayedAmount(factor);
             yield return null;
             factor = (Time.time - startTime) / duration;
         }
 
         SetDisplayedAmount(1f);
+    }
+
+    private void ResetColor(Color color)
+    {
+        var colorKeys = new GradientColorKey[]
+        {
+            new GradientColorKey(color, 0),
+            new GradientColorKey(color, 1)
+        };
+
+        foreach (var line in _lineRenderers)
+        {
+            var gradient = line.colorGradient;
+            gradient.colorKeys = colorKeys;
+            line.colorGradient = gradient;
+        }
     }
 
     private void Awake()
@@ -110,7 +128,8 @@ public class LineMaskWritingDisplay : WritingDisplay
             var gradient = line.colorGradient;
             if (i > Mathf.Floor(multipliedAmount))
             {
-                gradient.colorKeys = new GradientColorKey[] {
+                gradient.colorKeys = new GradientColorKey[]
+                {
                     new GradientColorKey(color, 0)
                 };
             }
@@ -126,12 +145,13 @@ public class LineMaskWritingDisplay : WritingDisplay
 
             line.colorGradient = gradient;
         }
-
-        _previousColor = color;
     }
 
     public override void StartWriting(float duration, Color startingColor)
     {
+        ResetColor(startingColor);
+        SetDisplayedAmount(0);
+        ChangeColor(startingColor);
         StartCoroutine(WritingRoutine(duration));
     }
 
@@ -141,5 +161,8 @@ public class LineMaskWritingDisplay : WritingDisplay
         SetDisplayedAmount(1f);
     }
 
-    public override void Reset() => SetDisplayedAmount(0);
+    public override void Reset()
+    {
+        SetDisplayedAmount(0);
+    }
 }
