@@ -15,7 +15,7 @@ public class WritingController : MonoBehaviour
         if (_previousChange < 0) return;
 
         print($"Changing pen from: {_previousPen} to: {pen}");
-        _flow.Add(new LectureSegment(Time.time - _previousChange, pen));
+        _flow.Add(new LectureSegment(Time.time - _previousChange, _previousPen));
         _previousChange = Time.time;
         _previousPen = pen;
         if (WritingDisplay) WritingDisplay.ChangeColor(pen.Color);

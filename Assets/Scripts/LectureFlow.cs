@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,18 +16,35 @@ public class LectureFlow : List<LectureSegment>
 
         var calculatedTime = 0f;
         var timedDistribution = distribution.ToDictionary(item => item.Key, item => item.Value * duration);
-        var styles = timedDistribution.Keys.ToArray();
+        var styles = timedDistribution.Keys.ToList();
+
+        // Magic number to keep flow interesting.
         var minDuration = 2f;
+        var maxDuration = 6f;
 
         while (calculatedTime < duration)
         {
-            var style = styles[Random.Range(0, styles.Length)];
-            var maxDuration = timedDistribution[style];
-            if (maxDuration <= 0f) continue;
+            IStyle style;
+            // The first segment will be the one with the largest distribution (the "normal")
+            if (calculatedTime == 0f)
+            {
+                style = distribution.OrderBy(item => item.Value).Select(item => item.Key).Last();
+            }
+            else
+            {
+                style = styles[Random.Range(0, styles.Count)];
+            }
+
+            var remainingDuration = timedDistribution[style];
+            if (remainingDuration <= 0f)
+            {
+                styles.Remove(style);
+                continue;
+            }
 
             var styleDuration = Random.Range(
-                Mathf.Min(minDuration, maxDuration),
-                maxDuration
+                Mathf.Min(minDuration, remainingDuration),
+                Mathf.Min(remainingDuration, maxDuration)
             );
             timedDistribution[style] -= styleDuration;
             calculatedTime += styleDuration;
@@ -98,5 +114,23 @@ public class LectureFlow : List<LectureSegment>
             output.AppendLine($"{segment.Duration} - {segment.Style}");
         }
         return output.ToString();
+    }
+
+    /// <summary>
+    /// Used to increase duration of a segment instead of making several identical segments one
+    /// after the other.
+    /// </summary>
+    new public void Add(LectureSegment segment)
+    {
+        if (this.Count > 0)
+        {
+            var lastElement = this[this.Count - 1];
+            if (lastElement.Style == segment.Style)
+            {
+                lastElement.Duration += segment.Duration;
+                return;
+            }
+        }
+        base.Add(segment);
     }
 }
