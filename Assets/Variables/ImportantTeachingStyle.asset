@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayText: IMPORTANT
   VoiceClip: {fileID: 8300000, guid: 4fc0a9bacf474794aba2167ba1a19b6b, type: 3}
+  AnimationIndex: 3

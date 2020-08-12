@@ -18,7 +18,7 @@ public class WritingController : MonoBehaviour
         _flow.Add(new LectureSegment(Time.time - _previousChange, pen));
         _previousChange = Time.time;
         _previousPen = pen;
-        WritingDisplay.ChangeColor(pen.Color);
+        if (WritingDisplay) WritingDisplay.ChangeColor(pen.Color);
     }
 
     private void Awake()
@@ -35,7 +35,7 @@ public class WritingController : MonoBehaviour
         _previousChange = Time.time;
         _previousPen = DefaultPen;
         _flow.Clear();
-        WritingDisplay.StartWriting(duration, DefaultPen.Color);
+        if (WritingDisplay) WritingDisplay.StartWriting(duration, DefaultPen.Color);
     }
 
     public LectureFlow Stop()
@@ -44,7 +44,7 @@ public class WritingController : MonoBehaviour
         // Add the last pen's duration.
         _flow.Add(new LectureSegment(Time.time - _previousChange, _previousPen));
         _previousChange = -1f;
-        WritingDisplay.StopWriting();
+        if (WritingDisplay) WritingDisplay.StopWriting();
         return _flow;
     }
 }

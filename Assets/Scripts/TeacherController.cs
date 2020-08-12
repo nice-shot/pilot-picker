@@ -5,11 +5,24 @@ using UnityEngine.UI;
 
 public class TeacherController : MonoBehaviour
 {
+    private readonly int IndexAnimParam = Animator.StringToHash("Index");
+
     public Text DisplayText;
     public AudioSource Voice;
+    public Animator Animator;
 
     public AudioClip IntroVoiceClip;
     public AudioClip OutroVoiceClip;
+
+    private void ChangeDisplayText(string text)
+    {
+        if (DisplayText) DisplayText.text = text;
+    }
+
+    private void ChangeAnimation(int index)
+    {
+        if (Animator) Animator.SetInteger(IndexAnimParam, index);
+    }
 
     private IEnumerator PlayRouting(LectureFlow flow)
     {
@@ -18,25 +31,27 @@ public class TeacherController : MonoBehaviour
             var teachingStyle = segment.Style as TeachingStyle;
             if (teachingStyle)
             {
-                DisplayText.text = teachingStyle.DisplayText;
+                ChangeDisplayText(teachingStyle.DisplayText);
+                ChangeAnimation(teachingStyle.AnimationIndex);
                 Voice.clip = teachingStyle.VoiceClip;
                 Voice.loop = true;
                 Voice.Play();
             }
             else
             {
-                DisplayText.text = "?";
+                ChangeDisplayText("?");
                 Voice.Stop();
             }
             yield return new WaitForSeconds(segment.Duration);
         }
-        DisplayText.text = "DONE";
+        ChangeDisplayText("DONE");
     }
 
     public void PlayIntro()
     {
         print("Playing teacher intro.");
-        DisplayText.text = "INTRO";
+        ChangeDisplayText("INTRO");
+        ChangeAnimation(0);
         Voice.clip = IntroVoiceClip;
         Voice.loop = false;
         Voice.Play();
@@ -52,7 +67,8 @@ public class TeacherController : MonoBehaviour
     {
         print("Stopping.");
         StopAllCoroutines();
-        DisplayText.text = "DONE";
+        ChangeDisplayText("DONE");
+        ChangeAnimation(-1);
         Voice.clip = IntroVoiceClip;
         Voice.loop = false;
         Voice.Play();

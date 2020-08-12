@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayText: ANGRY
   VoiceClip: {fileID: 8300000, guid: 0981d8c5a9c899248b6fba6791c0db38, type: 3}
+  AnimationIndex: 2
