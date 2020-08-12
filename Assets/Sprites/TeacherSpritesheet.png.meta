@@ -1,0 +1,1403 @@
+fileFormatVersion: 2
+guid: d24954478c629724caf18fa7fbbe58a7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6508139403905530486
+    second: TeacherNormal_Main
+  - first:
+      213: 4049907799973783507
+    second: TeacherNormal_Mouth-01
+  - first:
+      213: 3629090743162612149
+    second: TeacherNormal_Mouth-02
+  - first:
+      213: 9104373987990111240
+    second: TeacherNormal_Mouth-03
+  - first:
+      213: 6549950925153542412
+    second: TeacherNormal_Mouth-05
+  - first:
+      213: -5933348519306417634
+    second: TeacherNormal_Arm-01
+  - first:
+      213: 411775852810905144
+    second: TeacherNormal_Arm-02
+  - first:
+      213: -856855137197613116
+    second: TeacherNormal_Arm-03
+  - first:
+      213: 4138434593773258001
+    second: TeacherNormal_Arm-04
+  - first:
+      213: 6566404680988847039
+    second: TeacherNormal_Arm-05
+  - first:
+      213: -5050414640543396676
+    second: TeacherNormal_Main
+  - first:
+      213: -3156570403308399337
+    second: TeacherNormal_Mouth-01
+  - first:
+      213: 673859480896198351
+    second: TeacherNormal_Mouth-02
+  - first:
+      213: 2061988404718299405
+    second: TeacherNormal_Arm-01
+  - first:
+      213: -6341594568547469583
+    second: TeacherNormal_Arm-02
+  - first:
+      213: -8837202485200448269
+    second: TeacherNormal_Arm-03
+  - first:
+      213: 6709622768369568481
+    second: TeacherNormal_Arm-04
+  - first:
+      213: 761039477921343741
+    second: TeacherNormal_Arm-05
+  - first:
+      213: 5366162728354623468
+    second: TeacherNormal_Arm-04
+  - first:
+      213: 3375977020994876979
+    second: TeacherNormal_Arm-05
+  - first:
+      213: -7949701737181519145
+    second: TeacherExcited_Main
+  - first:
+      213: 3467760967390051486
+    second: TeacherSpritesheet_11
+  - first:
+      213: 1109639193128982465
+    second: TeacherExcited_Mouth-01
+  - first:
+      213: -6843569159977917690
+    second: TeacherExcited_Mouth-02
+  - first:
+      213: 8862644671497206438
+    second: TeacherExcited_Mouth-03
+  - first:
+      213: -1520600114147259190
+    second: TeacherExcited_Mouth-04
+  - first:
+      213: 7186992278351975466
+    second: TeacherExcited_Arms-01
+  - first:
+      213: -5207389096678023082
+    second: TeacherExcited_Arms-02
+  - first:
+      213: 7632688250144476807
+    second: TeacherExcited_Arms-03
+  - first:
+      213: -6712683701219049625
+    second: TeacherExcited_Arms-04
+  - first:
+      213: 5482832361711140374
+    second: TeacherAngry_Main
+  - first:
+      213: 3291233451414131723
+    second: TeacherAngry_Lines-01
+  - first:
+      213: 6437187264330609558
+    second: TeacherAngry_Lines-02
+  - first:
+      213: -2690848097135106449
+    second: TeacherAngry_Lines-03
+  - first:
+      213: 7422642891768937862
+    second: TeacherAngry_Lines-04
+  - first:
+      213: 3942617353063936023
+    second: TeacherAngry_Lines-05
+  - first:
+      213: 8230867664493576506
+    second: TeacherAngry_Lines-06
+  - first:
+      213: -931025982232171484
+    second: TeacherAngry_Lines-07
+  - first:
+      213: 8180273039213502988
+    second: TeacherAngry_Lines-08
+  - first:
+      213: -4083120367684892908
+    second: TeacherAngry_Lines-09
+  - first:
+      213: -1841904140730889356
+    second: TeacherAngry_Lines-10
+  - first:
+      213: -1931913507028686478
+    second: TeacherAngry_Lines-11
+  - first:
+      213: 3655594243806029910
+    second: TeacherAngry_Lines-12
+  - first:
+      213: 7467855023268988003
+    second: TeacherAngry_Lines-13
+  - first:
+      213: 8134873519846692604
+    second: TeacherAngry_Mouth-01
+  - first:
+      213: 5244346402841595681
+    second: TeacherAngry_Mouth-02
+  - first:
+      213: -3066396831385621292
+    second: TeacherAngry_Mouth-03
+  - first:
+      213: 2024098218523386176
+    second: TeacherAngry_Mouth-04
+  - first:
+      213: -8241057236599005117
+    second: TeacherImportant_Main
+  - first:
+      213: 573699350784235614
+    second: TeacherImportant_Mouth-01
+  - first:
+      213: 4481817301764383190
+    second: TeacherImportant_Mouth-02
+  - first:
+      213: 753212224723621823
+    second: TeacherImportant_Mouth-03
+  - first:
+      213: -1981982700226087929
+    second: TeacherImportant_Mouth-04
+  - first:
+      213: 6030276805757480934
+    second: TeacherImportant_Arm-01
+  - first:
+      213: 7109984981763784009
+    second: TeacherImportant_Arm-02
+  - first:
+      213: -4936626849491161051
+    second: TeacherImportant_Arm-03
+  - first:
+      213: 6773036251210351184
+    second: TeacherImportant_Arm-04
+  - first:
+      213: 3329821912268035964
+    second: TeacherSpritesheet_47
+  - first:
+      213: -5050414640543396676
+    second: TeacherNormal_Main
+  - first:
+      213: -3156570403308399337
+    second: TeacherNormal_Mouth-01
+  - first:
+      213: 3629090743162612149
+    second: TeacherNormal_Mouth-02
+  - first:
+      213: 9104373987990111240
+    second: TeacherNormal_Mouth-03
+  - first:
+      213: 6549950925153542412
+    second: TeacherNormal_Mouth-04
+  - first:
+      213: -8837202485200448269
+    second: TeacherNormal_Arm-01
+  - first:
+      213: 6709622768369568481
+    second: TeacherNormal_Arm-02
+  - first:
+      213: 761039477921343741
+    second: TeacherNormal_Arm-03
+  - first:
+      213: 1951285163128732752
+    second: TeacherNormal_Arm-04
+  - first:
+      213: -2692107319637290171
+    second: TeacherNormal_Arm-05
+  - first:
+      213: 7079723617814145643
+    second: TeacherExcited_Main
+  - first:
+      213: 5776915255840884550
+    second: TeacherSpritesheet_11
+  - first:
+      213: -660506493795916245
+    second: TeacherExcited_Mouth-01
+  - first:
+      213: -3273459175729490416
+    second: TeacherExcited_Mouth-02
+  - first:
+      213: 7949584022489869913
+    second: TeacherExcited_Mouth-03
+  - first:
+      213: -3032056025798847084
+    second: TeacherExcited_Mouth-04
+  - first:
+      213: -6822743168488268247
+    second: TeacherExcited_Arms-01
+  - first:
+      213: 1506644561073345065
+    second: TeacherExcited_Arms-02
+  - first:
+      213: 72460726003606814
+    second: TeacherExcited_Arms-03
+  - first:
+      213: -6316338581666867843
+    second: TeacherExcited_Arms-04
+  - first:
+      213: -4729866181596392131
+    second: TeacherAngry_Main
+  - first:
+      213: -3295332332096869711
+    second: TeacherAngry_Lines-01
+  - first:
+      213: -4498290945045804272
+    second: TeacherAngry_Lines-02
+  - first:
+      213: 2278231128689328649
+    second: TeacherAngry_Lines-03
+  - first:
+      213: -986938457411602872
+    second: TeacherAngry_Lines-04
+  - first:
+      213: 1626544577364991275
+    second: TeacherAngry_Lines-05
+  - first:
+      213: 1909288991996065703
+    second: TeacherAngry_Lines-06
+  - first:
+      213: 3393955802014361140
+    second: TeacherAngry_Lines-07
+  - first:
+      213: 4093011477504082959
+    second: TeacherAngry_Lines-08
+  - first:
+      213: -2999713690112188452
+    second: TeacherAngry_Lines-09
+  - first:
+      213: -2229253145909558252
+    second: TeacherAngry_Lines-10
+  - first:
+      213: 4593385736226111526
+    second: TeacherAngry_Lines-11
+  - first:
+      213: -535948796988776215
+    second: TeacherAngry_Lines-12
+  - first:
+      213: 693062267824379399
+    second: TeacherAngry_Lines-13
+  - first:
+      213: -2852573544428225255
+    second: TeacherAngry_Mouth-01
+  - first:
+      213: -5332563846497572140
+    second: TeacherAngry_Mouth-02
+  - first:
+      213: 7727867456279769595
+    second: TeacherAngry_Mouth-03
+  - first:
+      213: 3733439069560534485
+    second: TeacherAngry_Mouth-04
+  - first:
+      213: 1898670897985903440
+    second: TeacherImportant_Main
+  - first:
+      213: 5759988405376689293
+    second: TeacherImportant_Mouth-01
+  - first:
+      213: 1447213250857971339
+    second: TeacherImportant_Mouth-02
+  - first:
+      213: -8974718114398950337
+    second: TeacherImportant_Mouth-03
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TeacherNormal_Main
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1823
+        width: 197
+        height: 592
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc8af584a259e9b0800000000000000
+      internalID: -5050414640543396676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherNormal_Mouth-01
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 2348
+        width: 55
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7159a4241fb9134d0800000000000000
+      internalID: -3156570403308399337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherNormal_Arm-01
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2091
+        width: 305
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f49d654923fb5580800000000000000
+      internalID: -8837202485200448269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherNormal_Arm-02
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 2091
+        width: 307
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea8a85db5e5d1d50800000000000000
+      internalID: 6709622768369568481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherNormal_Arm-03
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 2091
+        width: 305
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8ec8d7f51cf8a00800000000000000
+      internalID: 761039477921343741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherNormal_Mouth-02
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 2348
+        width: 55
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9addb9dce1d5230800000000000000
+      internalID: 3629090743162612149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherNormal_Mouth-03
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2348
+        width: 53
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8040570b7eb395e70800000000000000
+      internalID: 9104373987990111240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherNormal_Mouth-04
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2348
+        width: 54
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01a40ec9a916ea50800000000000000
+      internalID: 6549950925153542412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherNormal_Arm-04
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 2091
+        width: 305
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c37cb748b541b10800000000000000
+      internalID: 1951285163128732752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherNormal_Arm-05
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 2091
+        width: 305
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5435acbf7a6b3aad0800000000000000
+      internalID: -2692107319637290171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherExcited_Main
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1120
+        width: 479
+        height: 701
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a61c3de1b304260800000000000000
+      internalID: 7079723617814145643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherSpritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1816
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6474ee951d9bb2050800000000000000
+      internalID: 5776915255840884550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherExcited_Mouth-01
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1638
+        width: 96
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26a479e7d865d6f0800000000000000
+      internalID: -660506493795916245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherExcited_Mouth-02
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1638
+        width: 96
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01696e329365292d0800000000000000
+      internalID: -3273459175729490416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherExcited_Mouth-03
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 1638
+        width: 96
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e21acbc88925e60800000000000000
+      internalID: 7949584022489869913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherExcited_Mouth-04
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 1639
+        width: 97
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4955d2beb19fbe5d0800000000000000
+      internalID: -3032056025798847084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherExcited_Arms-01
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1120
+        width: 668
+        height: 397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e98889c3fb051a0800000000000000
+      internalID: -6822743168488268247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherExcited_Arms-02
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 1120
+        width: 667
+        height: 397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9221d89ee3da8e410800000000000000
+      internalID: 1506644561073345065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherExcited_Arms-03
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 1120
+        width: 668
+        height: 397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15ac9975ae610100800000000000000
+      internalID: 72460726003606814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherExcited_Arms-04
+      rect:
+        serializedVersion: 2
+        x: 2691
+        y: 1124
+        width: 667
+        height: 397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75d6ae768bd758a0800000000000000
+      internalID: -6316338581666867843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Main
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 569
+        width: 318
+        height: 531
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3550da84c32c5eb0800000000000000
+      internalID: -4729866181596392131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-01
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1020
+        width: 124
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1baa18014b0a442d0800000000000000
+      internalID: -3295332332096869711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-02
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1020
+        width: 124
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b403ce73cd291c0800000000000000
+      internalID: -4498290945045804272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-03
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 1020
+        width: 124
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902c3c51427ed9f10800000000000000
+      internalID: 2278231128689328649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-04
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 1020
+        width: 124
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8463fc6b3b0bd42f0800000000000000
+      internalID: -986938457411602872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-05
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 1021
+        width: 124
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d9d21eca5a29610800000000000000
+      internalID: 1626544577364991275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-06
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 1020
+        width: 124
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a73d7de8382f7a10800000000000000
+      internalID: 1909288991996065703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-07
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 1020
+        width: 124
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436217ae1d0c91f20800000000000000
+      internalID: 3393955802014361140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-08
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 1020
+        width: 124
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f044a3ac04c4dc830800000000000000
+      internalID: 4093011477504082959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-09
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 1020
+        width: 124
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf9cf0ca40ee56d0800000000000000
+      internalID: -2999713690112188452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-10
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 1020
+        width: 124
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41483ab231a1011e0800000000000000
+      internalID: -2229253145909558252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-11
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 1020
+        width: 124
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6208a148dfbfebf30800000000000000
+      internalID: 4593385736226111526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-12
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 1020
+        width: 125
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0afa1a86def88f0800000000000000
+      internalID: -535948796988776215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Lines-13
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 1020
+        width: 125
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70616e8e5704e9900800000000000000
+      internalID: 693062267824379399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Mouth-01
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 962
+        width: 72
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dbda4997f9968d0800000000000000
+      internalID: -2852573544428225255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Mouth-02
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 962
+        width: 73
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4daeb6b4f6deef5b0800000000000000
+      internalID: -5332563846497572140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Mouth-03
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 963
+        width: 72
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf17bdae186ee3b60800000000000000
+      internalID: 7727867456279769595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherAngry_Mouth-04
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 962
+        width: 72
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d578bb9d07dfc330800000000000000
+      internalID: 3733439069560534485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherImportant_Main
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 353
+        height: 559
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b52d34f1f695a10800000000000000
+      internalID: 1898670897985903440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherImportant_Mouth-01
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 515
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84a8dcdfe69fef40800000000000000
+      internalID: 5759988405376689293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherImportant_Mouth-02
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 515
+        width: 55
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ea0a3b8c8851410800000000000000
+      internalID: 1447213250857971339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherImportant_Mouth-03
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 515
+        width: 55
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cacffcc65637380800000000000000
+      internalID: -8974718114398950337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherImportant_Mouth-04
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 515
+        width: 54
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704fd023c359e74e0800000000000000
+      internalID: -1981982700226087929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherImportant_Arm-01
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 64
+        width: 319
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efa3781ec8dfa350800000000000000
+      internalID: 6030276805757480934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherImportant_Arm-02
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 66
+        width: 321
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d746cabadbba260800000000000000
+      internalID: 7109984981763784009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherImportant_Arm-03
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 62
+        width: 322
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5207c6729049d7bb0800000000000000
+      internalID: -4936626849491161051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherImportant_Arm-04
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 62
+        width: 320
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0528c3cd598aefd50800000000000000
+      internalID: 6773036251210351184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 34adbc99f0e128f49be3aeba4989238f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
