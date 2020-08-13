@@ -251,7 +251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.03, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &16816290
@@ -2667,17 +2667,17 @@ PrefabInstance:
     - target: {fileID: 1553234696249366872, guid: 9de3dda5c9a3d2b4f92476550074b126,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.16629584
+      value: 0.29923382
       objectReference: {fileID: 0}
     - target: {fileID: 1553234696249366872, guid: 9de3dda5c9a3d2b4f92476550074b126,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.6920865
+      value: 0.8018868
       objectReference: {fileID: 0}
     - target: {fileID: 1553234696249366872, guid: 9de3dda5c9a3d2b4f92476550074b126,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.9528302
+      value: 0.18534178
       objectReference: {fileID: 0}
     - target: {fileID: 1553234697200528596, guid: 9de3dda5c9a3d2b4f92476550074b126,
         type: 3}
@@ -2747,22 +2747,22 @@ PrefabInstance:
     - target: {fileID: 1553234697200528597, guid: 9de3dda5c9a3d2b4f92476550074b126,
         type: 3}
       propertyPath: m_Name
-      value: BluePen
+      value: GreenPen
       objectReference: {fileID: 0}
     - target: {fileID: 8413054148575187359, guid: 9de3dda5c9a3d2b4f92476550074b126,
         type: 3}
       propertyPath: Color.r
-      value: 0.16862746
+      value: 0.29803923
       objectReference: {fileID: 0}
     - target: {fileID: 8413054148575187359, guid: 9de3dda5c9a3d2b4f92476550074b126,
         type: 3}
       propertyPath: Color.g
-      value: 0.69411767
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8413054148575187359, guid: 9de3dda5c9a3d2b4f92476550074b126,
         type: 3}
       propertyPath: Color.b
-      value: 0.9529412
+      value: 0.18431373
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9de3dda5c9a3d2b4f92476550074b126, type: 3}
@@ -3872,7 +3872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1777431328
 RectTransform:
   m_ObjectHideFlags: 0

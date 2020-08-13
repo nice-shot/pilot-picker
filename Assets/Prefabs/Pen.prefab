@@ -178,7 +178,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: af2aced06979aab45b75720907d22c8d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -258,8 +258,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Color: {r: 0, g: 0, b: 0, a: 1}
-  Graphics: {fileID: 1553234697764762258}
-  Collider: {fileID: 1553234695984461986}
 --- !u!50 &4825831443222177439
 Rigidbody2D:
   serializedVersion: 4
