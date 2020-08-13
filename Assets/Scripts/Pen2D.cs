@@ -2,16 +2,26 @@ using UnityEngine;
 
 public class Pen2D : Pen
 {
+    public AudioSource PickupAudio;
+    public AudioSource DropAudio;
+    public GameObject Graphics;
+    public GameObject Collider;
+
     private void OnMouseDown() => Select();
 
     override public void Select()
     {
-        gameObject.SetActive(false);
+        Graphics.SetActive(false);
+        Collider.SetActive(false);
+        PickupAudio.Play();
+
         base.Select();
     }
 
     override public void Deselect()
     {
-        gameObject.SetActive(true);
+        Graphics.SetActive(true);
+        Collider.SetActive(true);
+        DropAudio.Play();
     }
 }

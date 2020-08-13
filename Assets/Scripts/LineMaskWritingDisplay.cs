@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LineMaskWritingDisplay : WritingDisplay
 {
+    public AudioSource WritingAudio;
+
     // Assumes the lines are ordered in the hierarchy from top to bottom.
     private LineRenderer[] _lineRenderers;
     private float _currentDisplayedAmount;
@@ -94,6 +96,7 @@ public class LineMaskWritingDisplay : WritingDisplay
         }
 
         SetDisplayedAmount(1f);
+        if (WritingAudio) WritingAudio.Stop();
     }
 
     private void ResetColor(Color color)
@@ -152,12 +155,14 @@ public class LineMaskWritingDisplay : WritingDisplay
         ResetColor(startingColor);
         SetDisplayedAmount(0);
         ChangeColor(startingColor);
+        if (WritingAudio) WritingAudio.Play();
         StartCoroutine(WritingRoutine(duration));
     }
 
     public override void StopWriting()
     {
         StopAllCoroutines();
+        if (WritingAudio) WritingAudio.Stop();
         SetDisplayedAmount(1f);
     }
 
