@@ -2,20 +2,21 @@ using UnityEngine;
 
 public class WritingController : MonoBehaviour
 {
-    public PilotPen[] Pens;
-    public PilotPen DefaultPen;
+    public Pen[] Pens;
+    public Pen DefaultPen;
     public WritingDisplay WritingDisplay;
 
     private LectureFlow _flow = new LectureFlow();
     private float _previousChange = -1f;
-    private PilotPen _previousPen;
+    private Pen _previousPen;
 
-    private void ChangePen(PilotPen pen)
+    private void ChangePen(Pen pen)
     {
         if (_previousChange < 0) return;
 
         print($"Changing pen from: {_previousPen} to: {pen}");
         _flow.Add(new LectureSegment(Time.time - _previousChange, _previousPen));
+        _previousPen.Deselect();
         _previousChange = Time.time;
         _previousPen = pen;
         if (WritingDisplay) WritingDisplay.ChangeColor(pen.Color);
@@ -32,8 +33,9 @@ public class WritingController : MonoBehaviour
     public void Listen(float duration)
     {
         print($"Started listening.");
-        _previousChange = Time.time;
         _previousPen = DefaultPen;
+        _previousPen.Select();
+        _previousChange = Time.time;
         _flow.Clear();
         if (WritingDisplay) WritingDisplay.StartWriting(duration, DefaultPen.Color);
     }
@@ -44,6 +46,7 @@ public class WritingController : MonoBehaviour
         // Add the last pen's duration.
         _flow.Add(new LectureSegment(Time.time - _previousChange, _previousPen));
         _previousChange = -1f;
+        _previousPen.Deselect();
         if (WritingDisplay) WritingDisplay.StopWriting();
         return _flow;
     }
