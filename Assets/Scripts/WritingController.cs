@@ -28,11 +28,13 @@ public class WritingController : MonoBehaviour
         {
             pen.OnPenSeleted += () => ChangePen(pen);
         }
+        Reset();
     }
 
     public void Listen(float duration)
     {
         print($"Started listening.");
+        foreach (var pen in Pens) pen.Selectable = true;
         _previousPen = DefaultPen;
         _previousPen.Select();
         _previousChange = Time.time;
@@ -48,11 +50,17 @@ public class WritingController : MonoBehaviour
         _previousChange = -1f;
         _previousPen.Deselect();
         if (WritingDisplay) WritingDisplay.StopWriting();
+        foreach (var pen in Pens) pen.Selectable = false;
         return _flow;
     }
 
     public void Reset()
     {
         if (WritingDisplay) WritingDisplay.Reset();
+        foreach (var pen in Pens)
+        {
+            pen.Reset();
+            pen.Selectable = false;
+        }
     }
 }

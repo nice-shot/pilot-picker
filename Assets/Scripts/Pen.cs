@@ -6,7 +6,14 @@ public abstract class Pen : MonoBehaviour, IStyle
     public event Action OnPenSeleted;
     public Color Color;
 
-    virtual public void Select() => OnPenSeleted?.Invoke();
+    public bool Selectable { get; set; } = true;
+
+    virtual public void Select()
+    {
+        if (Selectable) OnPenSeleted?.Invoke();
+    }
 
     virtual public void Deselect() { }
+
+    virtual public void Reset() { }
 }

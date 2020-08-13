@@ -11,6 +11,8 @@ public class Pen2D : Pen
 
     override public void Select()
     {
+        if (!Selectable) return;
+
         Graphics.SetActive(false);
         Collider.SetActive(false);
         PickupAudio.Play();
@@ -23,5 +25,10 @@ public class Pen2D : Pen
         Graphics.SetActive(true);
         Collider.SetActive(true);
         DropAudio.Play();
+    }
+
+    override public void Reset()
+    {
+        if (!Graphics.activeSelf) Deselect();
     }
 }

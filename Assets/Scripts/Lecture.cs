@@ -47,7 +47,7 @@ public class Lecture : MonoBehaviour
         UI.ShowScore(score);
     }
 
-    private void Start() => Restart();
+    // private void Start() => Restart();
 
     public void Restart() => StartCoroutine(LectureRoutine());
 }
